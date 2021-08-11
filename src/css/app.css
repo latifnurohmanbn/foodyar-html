@@ -1,3 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .overlay {
+    @apply absolute;
+  }
+
+  .overlay * {
+    @apply transition-all duration-200;
+  }
+
+  .overlay.hoverable > * {
+    @apply opacity-0;
+  }
+
+  .overlay.hoverable:hover > * {
+    @apply opacity-100;
+  }
+
+  .overlay .video {
+    @apply absolute transform bg-pink-200 bg-no-repeat bg-center rounded-full flex items-center justify-center;
+    background-image: url("../images/design/icon-play.svg");
+    top: 50%;
+    left: 50%;
+  }
+  .hero .hero-image,
+  .hero .hero-caption {
+    min-height: 90vh;
+  }
+  .hero .hero-cta {
+    @apply w-12 h-12;
+    transform: translateX(-50px) translateY(-50px);
+    background-size: 37.5%;
+  }
+}
+
+@screen md {
+  .hero .hero-image,
+  .hero .hero-caption {
+    min-height: auto;
+  }
+  .hero .hero-cta {
+    @apply w-20 h-20 translate-x-1/2 translate-y-80;
+    background-size: auto;
+  }
+}
+
+.rounded-bg-1 {
+  border-radius: 25px 25px 75px 75px;
+}
+
+.rounded-bg-2 {
+  border-radius: 75px 25px 75px 75px;
+}
+
+#card-picture {
+  border-radius: 75px 25px 75px 75px;
+}
+
+.special-try-cta {
+  @apply absolute transform bg-pink-200 bg-no-repeat bg-center rounded-full flex items-center justify-center;
+  background-image: url("../images/design/icon-play-special.svg");
+  top: 50%;
+  left: 50%;
+}
+
+.trapezium-1 {
+  position: absolute;
+  width: 408px;
+  height: 521px;
+  left: 228px;
+  top: 2067px;
+
+  background: #d8cbf6;
+  border-radius: 85px;
+}
+
+.trapezium-2 {
+  position: absolute;
+  width: 408px;
+  height: 521px;
+  left: 208px;
+  top: 2050px;
+
+  background: #fdfae5;
+  border-radius: 85px;
+}
+
+.trapezium-3 {
+  position: absolute;
+  width: 408px;
+  height: 522px;
+  left: 218px;
+  top: 2058px;
+}
